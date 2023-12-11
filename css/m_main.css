@@ -1,0 +1,122 @@
+@charset "utf-8";
+/* 모바일 메인 m_main.css*/
+main{
+  padding-top: 50px;
+}
+
+.slide{
+  position: relative;
+  height: 62vh;
+  overflow: hidden;/*넘어간 부분은 숨겨주기*/
+} /* 항상 부모에게 기준을 줘야함 */
+
+.slide img{
+  transform: translateY(-205px);
+  /* width: 100%;*/
+}
+
+.slide > h2{display: none;}
+
+.mySwiper .swiper-wrapper{
+  position: relative;
+}
+.mySwiper .swiper-slide h2{
+  font-size: 1.6em;
+  background: rgba(0,0,0,.7);
+  color: #fff;
+  font-weight: 500;
+  text-align: center;
+  padding: 6px 2.3%;
+  line-height: 40px;
+  position: absolute;
+  left: 50%; top: 35%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+  border-radius: 10px;
+}
+
+/* 메인 내비게이션 */
+.m_gnb > ul{
+  width: 90%;
+  display: grid;
+  margin: 20px auto;
+  /* margin: 20px 5%; */
+  grid-template-columns: repeat(3, auto);
+  grid-gap: 10px;
+}
+.m_gnb > ul > li{
+  border: 1px solid#ccc;
+  text-align: center;
+}
+.m_gnb > ul > li:last-child{
+  grid-area: 3/1/4/4;
+}
+.m_gnb .simg{
+  background: url(../mimages/nav_icon.png);
+  width: 83px; height: 66px;
+  background-size: 330px;
+  display: inline-block;
+}
+.m_gnb .mnu{
+  display: block;
+  line-height: 30px;
+  font-weight: 500;
+}
+
+.m_gnb li:first-child .simg{background-position: 3px 6px;} /* 병원소개 */
+.m_gnb li:nth-child(2) .simg{background-position: -71px 6px;} /* 의료진소개 */
+.m_gnb li:nth-child(3) .simg{background-position: -144px 7px;} /* 진료과목 */
+.m_gnb li:nth-child(4) .simg{background-position: -229px 6px;} /* 특화클리닉 */
+.m_gnb li:nth-child(5) .simg{background-position: 16px -59px;} /* 장비소개 */
+.m_gnb li:nth-child(6) .simg{background-position: -61px -59px;} /* 둘러보기 */
+.m_gnb li:last-child .simg{
+  background-size: 660px;
+  background-position: -287px -117px;
+} /* 오시는길 */
+
+.m_gnb li:last-child .mnu{
+  display: inline-block;
+  font-size: 1rem;
+}
+
+/* 둔산점 정보 */
+.info{
+  width: 90%; height: 70px;
+  background: url(../mimages/info_back.png);
+  margin: 20px auto;
+  color: #fff;
+  background-size: 100%;
+}
+
+.info h2{
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 70px;
+  width: 35%;
+  float: left;
+}
+.info p{
+  width: 65%;
+  float: right;
+  padding-bottom: 10px;
+}
+
+.info h2 i.fa-phone{
+  font-size: 1.8rem;
+  font-weight: bold;
+  padding: 10px 12px;
+  margin: 10px 8px 0px 10px;
+  float: left;
+  border: 2px solid#fff;
+  border-radius: 50%;
+}
+
+.tel{
+  padding-top: 12px;
+}
+
+.tel a{
+  color: #fff;
+  font-size: 1rem;
+}
